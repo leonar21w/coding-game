@@ -1,0 +1,83 @@
+/* styles.css */
+
+/* General reset and base styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Placeholder background */
+}
+
+/* Container for the main game content */
+.game-container {
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+/* Title of the game */
+.game-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Challenge text */
+.game-challengeText {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    color: #555;
+}
+
+/* Start button */
+.startButton {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.startButton:hover {
+    background-color: #0056b3;
+}
+
+/* Game description section */
+.game-description {
+    margin-top: 40px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Intro to the game story */
+.intro-to-game-story {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Game details section */
+.game-details {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    text-align: right;
+    color: #444;
+}
+
+.game-details h2 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.game-details p {
+    font-size: 1rem;
+    margin: 0;
+}
