@@ -1,21 +1,20 @@
-const canvas = document.getElementById("game-canvas");
+const canvas = document.getElementById("mascot_animation_canvas");
 const ctx = canvas.getContext("2d");
 ctx.imageSmoothingEnabled = false;
 
-const berry_sprite = new Image();
-let animation_call_berry = 'idle';
-berry_sprite.src = "/assets/game/sprites/Squirrel Sprite Sheet.png";
+const cow_sprite = new Image();
+let animation_call_cow = 'idle';
+cow_sprite.src = "/assets/html/Pink cow animation sprites.png";
 
 const CANVAS_WIDTH = canvas.width = 600;
 const CANVAS_HEIGHT = canvas.height = 600;
 const spriteWidth = 32;
 const spriteHeight = 32;
 let gameframe = 0;
-
 //Slowness of the animation sprite
 const stagger_frame = 10;
 
-//Mutating func
+//! Mutating
 function MutateAnimationCall(animation) {
     animation_call_berry = animation;
 }
@@ -36,15 +35,15 @@ animation_frames.forEach((state, index) => {
     spriteAnimations[state.name] = frames;
 });
 
-function animateBerry() {
+function animateSpriteDefined() {
     ctx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
 
-    let position = Math.floor(gameframe/stagger_frame) % spriteAnimations[animation_call_berry].loc.length;
+    let position = Math.floor(gameframe/stagger_frame) % spriteAnimations[animation_call_cow].loc.length;
     let frame_x = spriteWidth * position;
-    let frame_y = spriteAnimations[animation_call_berry].loc[position].y;
+    let frame_y = spriteAnimations[animation_call_cow].loc[position].y;
     // Draw the zoomed sprite
     ctx.drawImage(
-        berry_sprite, 
+        cow_sprite, 
         frame_x, 
         frame_y, 
         spriteWidth, 
@@ -57,8 +56,6 @@ function animateBerry() {
     ctx.imageSmoothingEnabled = false;
 
     gameframe++;
-    requestAnimationFrame(animateBerry);
+    requestAnimationFrame(animateSpriteDefined);
 }
-
-MutateAnimationCall("jump-run")
-animateBerry();
+animateSpriteDefined();
